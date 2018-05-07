@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hdu 1950", "hdu 1950\hdu 1950.vcxproj", "{52676DA8-96A7-4200-B50D-EB7A9949648F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52676DA8-96A7-4200-B50D-EB7A9949648F}.Debug|x64.ActiveCfg = Debug|x64
+		{52676DA8-96A7-4200-B50D-EB7A9949648F}.Debug|x64.Build.0 = Debug|x64
+		{52676DA8-96A7-4200-B50D-EB7A9949648F}.Debug|x86.ActiveCfg = Debug|Win32
+		{52676DA8-96A7-4200-B50D-EB7A9949648F}.Debug|x86.Build.0 = Debug|Win32
+		{52676DA8-96A7-4200-B50D-EB7A9949648F}.Release|x64.ActiveCfg = Release|x64
+		{52676DA8-96A7-4200-B50D-EB7A9949648F}.Release|x64.Build.0 = Release|x64
+		{52676DA8-96A7-4200-B50D-EB7A9949648F}.Release|x86.ActiveCfg = Release|Win32
+		{52676DA8-96A7-4200-B50D-EB7A9949648F}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FF7DEE12-D0D7-4D54-892A-20E974A9F612}
+	EndGlobalSection
+EndGlobal
