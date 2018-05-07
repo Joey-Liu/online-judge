@@ -1,0 +1,10 @@
+1
+5
+6
+-inf
+-inf
+inf
+-inf
+NaN
+4
+NaN
