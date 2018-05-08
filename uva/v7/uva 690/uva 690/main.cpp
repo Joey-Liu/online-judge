@@ -24,6 +24,7 @@ bool judge(int t0, int t1, int t2, int t3, int t4)
 void init()
 {
 	memset(state, 0, sizeof(state));
+	memset(cadi, 0, sizeof(cadi));
 	res = 10 * N;
 	for (int i = 0; i < 5; i++) {
 		cin >> str;
@@ -41,7 +42,7 @@ void init()
 
 void dfs(int layer, int ans, int t0, int t1, int t2, int t3, int t4) 
 {
-	if (ans + cadi[0] * (10 - layer) > res)
+	if (ans + cadi[0] * (9 - layer) > res)
 		return;
 	if (layer == 9) {
 		res = min(res, ans);
@@ -63,7 +64,7 @@ int main()
 	freopen("out.txt", "w", stdout);
 	ios::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);
-	while (cin >> N && N) {
+	while (cin >> N && N) { 
 		init();
 		dfs(0, N, state[0], state[1], state[2], state[3], state[4]);
 		cout << res << endl;
