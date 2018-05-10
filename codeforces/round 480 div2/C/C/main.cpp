@@ -69,4 +69,4 @@ int main()
 		cout << " " << vi[i];
 	cout << endl;
 
-}
+}//Kj+ewIT8wnTs

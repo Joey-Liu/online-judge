@@ -3,41 +3,49 @@
 #include <map>
 #include <algorithm>
 #include <vector>
+#include <unordered_map>
+#include <time.h>
 
 using namespace std;
 
 const int maxn = 200000 + 10;
-int nu[maxn], N;
-map<int, int> dp;
+int nu[maxn], N, x;
+unordered_map<int, int> dp;
 
 int main()
 {
+	srand(time(NULL));
 	freopen("in.txt", "r", stdin);
 	freopen("out.txt", "w", stdout);
+	ios::sync_with_stdio(false);
+	cin.tie(0); cout.tie(0);
+	
+	int ra = rand();
 
 	cin >> N;
-	for (int i = 0; i < N; i++) {
+	for (int i = 0; i < N; i++)
 		cin >> nu[i];
-	}
 
 	int maxi = -1, en_nu;
 	for (int i = 0; i < N; i++) {
-		int x = nu[i];
-		dp[x] = dp[x - 1] + 1;
+		int x = nu[i] ^ ra;
+		int y = (nu[i] - 1) ^ ra;
+		//dp[x] = dp[x - 1] + 1;
+		dp[x] = dp[y] + 1;
 		if (dp[x] > maxi) {
 			maxi = dp[x];
-			en_nu = x;
+			en_nu = x ^ ra;
 		}
 	}
 
-	int tmp = en_nu;
-	vector<int> vi;
+	int tmp = en_nu, ind = 0;
+	vector<int> vi(maxi);
 	for (int i = N - 1; i >= 0; i--) {
 		if (nu[i] == tmp) {
-			vi.push_back(i);
+			vi[ind++] = i;
 			tmp--;
 		}
-		if (tmp == maxi - en_nu)
+		if (tmp == en_nu - maxi)
 			break;
 	}
 
