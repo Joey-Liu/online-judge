@@ -9,8 +9,8 @@ class Solution {
 public:
 	bool isMatch(string s, string p) {
 		int n1 = p.size(), n2 = s.size();
-		char *ss = new char[n1 + 2];
-		char *pp = new char[n2 + 2];
+		char *ss = new char[n2 + 2];
+		char *pp = new char[n1 + 2];
 
 		strcpy(ss + 1, s.c_str());
 		strcpy(pp + 1, p.c_str());
