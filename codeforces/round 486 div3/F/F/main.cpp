@@ -3,6 +3,7 @@
 #include <algorithm>
 #include <vector>
 #include <map>
+#include <set>
 
 using namespace std;
 const int maxn = 2000 + 5;
@@ -32,7 +33,6 @@ int main()
 		umb[x] = min(umb[x], make_pair(c, i));
 		cost[i] = c;
 	}
-
 	dp[0][M] = 0;
 	for (int i = 0; i < A; i++) {
 		for (int j = 0; j <= M; j++) {
