@@ -1,49 +1,69 @@
 #include <iostream>
-#include <vector>
 #include <memory.h>
-#include <string>
+#include <stdio.h>
+#include <stdlib.h>
+#include <vector>
+#include <set>
 
 using namespace std;
+
 const int maxn = 5000 + 10;
 
-int N, M, S, label = 1;
-vector<vector<int> > ve(maxn);
-int vis[maxn];
-int ru[maxn];
+vector<vector<int> > edges(maxn);
+int visited[maxn];
+
 
 void dfs(int id, int n) {
-	for (int i = 0; i < ve[n].size(); i++) {
-		int a = ve[n][i];
-		if (vis[a] == -1) {
-			vis[a] = id;
-			dfs(id, a);
+	for (int i = 0; i < edges[n].size(); i++) {
+		int j = edges[n][i];
+		if (visited[j] == -1) {
+			visited[j] = id;
+			dfs(id, j);
 		}
 	}
 }
 
-int main()
-{
+void dfs2(int id, int n) {
+	for (int i = 0; i < edges[n].size(); i++) {
+		int j = edges[n][i];
+		if (visited[j] != id && visited[j] != 1) {
+			visited[j] = id;
+			dfs2(id, j);
+		}
+	}
+}
+
+int N, M, S;
+int main() {
+	freopen("in.txt", "r", stdin);
+	freopen("out.txt", "w", stdout);
 	ios::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);
-
 	cin >> N >> M >> S;
 	for (int i = 0; i < M; i++) {
 		int a, b;
 		cin >> a >> b;
-		ve[a].push_back(b);
-		ru[b]++;
+		edges[a].push_back(b);
+	}
+	memset(visited, -1, sizeof(visited));
+	
+	visited[S] = 1;
+	dfs(1, S);
+
+	int id = 2;
+	for (int i = 1; i <= N; i++) {
+		if (visited[i] != -1) {
+			continue;
+		}
+
+		visited[i] = id;
+		dfs2(id++, i);
 	}
 
-	memset(vis, -1, sizeof(vis));
-	vis[S] = label;
-	dfs(label++, S);
-	
+	set<int> si;
 	for (int i = 1; i <= N; i++) {
-		if (vis[i] == -1 && ru[i] == 0) {
-			vis[i] = label;
-			dfs(label++, i);
-		}
+		si.insert(visited[i]);
 	}
-	
-	cout << label - 1 << endl;
+	cout << si.size() - 1 << endl;
+	return 0;
 }
