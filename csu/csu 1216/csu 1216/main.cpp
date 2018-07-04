@@ -75,10 +75,18 @@ void delete_node(Node * p) {
 	delete p;
 }
 
+unsigned int reverseBits(unsigned int n) {
+	unsigned int ans = 0;
+	for (unsigned int i = 0; i < 32; i++) {
+		ans |= (!!((1 << i) & n)) << (31 - i);
+		cout << ans << endl;
+	}
+	return ans;
+}
+
 int main()
 {
-	freopen("in.txt", "r", stdin);
-	freopen("out.txt", "w", stdout);
+	reverseBits(43261596);
 	while(cin>>N) {
 		head = new Node();
 		for (int i = 0; i < N; i++) {
