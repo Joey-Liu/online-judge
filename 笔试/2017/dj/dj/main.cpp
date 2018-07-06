@@ -1,0 +1,1 @@
+vector<int> work(vector<int> vi, int k)
