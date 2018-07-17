@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2037
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hdu 1394", "hdu 1394\hdu 1394.vcxproj", "{8616DA0C-41E3-4899-A20E-D048D8106552}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8616DA0C-41E3-4899-A20E-D048D8106552}.Debug|x64.ActiveCfg = Debug|x64
+		{8616DA0C-41E3-4899-A20E-D048D8106552}.Debug|x64.Build.0 = Debug|x64
+		{8616DA0C-41E3-4899-A20E-D048D8106552}.Debug|x86.ActiveCfg = Debug|Win32
+		{8616DA0C-41E3-4899-A20E-D048D8106552}.Debug|x86.Build.0 = Debug|Win32
+		{8616DA0C-41E3-4899-A20E-D048D8106552}.Release|x64.ActiveCfg = Release|x64
+		{8616DA0C-41E3-4899-A20E-D048D8106552}.Release|x64.Build.0 = Release|x64
+		{8616DA0C-41E3-4899-A20E-D048D8106552}.Release|x86.ActiveCfg = Release|Win32
+		{8616DA0C-41E3-4899-A20E-D048D8106552}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC33685A-D81D-40FE-8496-02414C2ABFB5}
+	EndGlobalSection
+EndGlobal
