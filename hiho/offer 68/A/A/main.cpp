@@ -11,24 +11,20 @@
 
 using namespace std;
 
-
-int gcd(int a, int b) {
-	
-	while (b) {
-		int tmp = a % b;
-		a = b;
-		b = tmp;
-	}
-	return a;
-
-}
+typedef long long LL;
 
 int main()
 {
-	int a, b;
-	while (cin >> a >> b) {
-		int c = gcd(a, b);
-		cout << c << endl;
+	freopen("in.txt", "r", stdin);
+	freopen("out.txt", "w", stdout);
+	LL N, K;
+	cin >> N >> K;
+
+	LL res = 1, ans = 0;
+	while (res < N) {
+		res = res + res * K;
+		ans++;
 	}
+	cout << ans << endl;
 	return 0;
 }
