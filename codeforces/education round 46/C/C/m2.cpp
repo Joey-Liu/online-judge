@@ -9,7 +9,7 @@ using namespace std;
 typedef long long LL;
 typedef pair<LL, LL> PLL;
 
-const int maxn = 200000 + 10;
+const int maxn = 20000 + 10;
 
 LL N, ans[maxn];
 PLL seg[maxn];
