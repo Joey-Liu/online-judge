@@ -19,15 +19,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="m2.cpp">
       <SubType>
       </SubType>
     </ClCompile>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{324be6fa-77e9-43c1-be53-fad48349f429}</ProjectGuid>
-    <RootNamespace>MS</RootNamespace>
+    <ProjectGuid>{7a447eee-03a9-441b-b73d-d205140d0289}</ProjectGuid>
+    <RootNamespace>D</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
