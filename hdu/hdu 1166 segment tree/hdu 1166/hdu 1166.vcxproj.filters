@@ -18,5 +18,8 @@
     <ClCompile Include="m2.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="程序设计竞赛模板2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

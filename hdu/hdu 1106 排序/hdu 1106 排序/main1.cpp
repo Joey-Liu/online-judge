@@ -44,10 +44,35 @@ void quick_sort(int lp, int rp) {
 
 }
 
+void bubble_sort(vector<int> & vi) {
+	int N = vi.size();
+
+	for (int i = 0; i < N; i++) {
+		for (int j = 0; j < N - i - 1; j++) {
+			if (vi[j] > vi[j + 1])
+				swap(vi[j], vi[j + 1]);
+		}
+	}//for int i
+
+}
+
+int CountZero(int N)
+{
+	int ret = 0;
+	while (N)
+	{
+		ret += N / 5;
+		N /= 5;
+	}
+	return ret;
+}
+
 int main()
 {
-	freopen("in.txt", "r", stdin);
-	freopen("out.txt", "w", stdout);
+	//freopen("in.txt", "r", stdin);
+	//freopen("out.txt", "w", stdout);
+	int res = CountZero(10000);
+	cout << res << endl;
 	while (cin >> str) {
 		vi.clear();
 		for (int i = 0; i < str.size(); i++) {
@@ -64,7 +89,8 @@ int main()
 
 		//sort(vi.begin(), vi.end());
 		int N = vi.size();
-		quick_sort(0, N - 1);
+		//quick_sort(0, N - 1);
+		bubble_sort(vi);
 		cout << vi[0];
 		for (int i = 1; i < vi.size(); i++)
 			cout << " " << vi[i];

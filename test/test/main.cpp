@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stack>
 #include <string.h>
+#include <sstream>
 
 using namespace std;
 
@@ -56,5 +57,12 @@ int main() {
 	string s = "3-(5-(8)-(2+(9-(0-(8-(2))))-(4))-(4))";
 	int a = sol.calculate(s);
 	cout << a << endl;
+	stringstream ss;
+	long double d = long double (8.45648387458);
+	ss << d;
+	string str;
+	ss >> str;
+	cout << str << endl;
+	system("pause");
 	return 0;
 }
