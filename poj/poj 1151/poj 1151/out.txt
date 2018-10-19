@@ -1,0 +1,8 @@
+Test case #1
+Total explored area: 1.85
+
+Test case #2
+Total explored area: 751.10
+
+Test case #3
+Total explored area: 99910.16

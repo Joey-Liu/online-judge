@@ -19,10 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="m3.cpp">
-      <SubType>
-      </SubType>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <SubType>
       </SubType>
@@ -30,8 +26,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{f20a3e29-2b06-48aa-97e8-cf0c23e19c96}</ProjectGuid>
-    <RootNamespace>D</RootNamespace>
+    <ProjectGuid>{0fc1cc0c-869d-4b96-a6dc-a52ba799bf4f}</ProjectGuid>
+    <RootNamespace>poj_1151</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
