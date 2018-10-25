@@ -6,3 +6,6 @@ Total explored area: 751.10
 
 Test case #3
 Total explored area: 99910.16
+
+Test case #4
+Total explored area: 1.85
