@@ -134,7 +134,7 @@ int main()
 			add_line(c, b, d, -1);
 			yy[y_cnt++] = d;
 		}
-
+		map<int, int> tab;
 		sort(yy + 1, yy + y_cnt);
 		y_cnt = unique(yy + 1, yy + y_cnt) - (yy + 1);
 		sort(lines + 1, lines + l_cnt, cmp);
