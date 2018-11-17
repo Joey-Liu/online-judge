@@ -48,10 +48,11 @@ int main()
 	freopen("out.txt", "w", stdout);
 	ios::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);
-	
+
 
 	cin >> N >> M >> sr >> sc >> X >> Y;
 	sr--; sc--;
+
 
 	memset(visited, false, sizeof(visited));
 	for (int i = 0; i < N; i++) {
