@@ -41,7 +41,7 @@ int main()
 			while (ed < N && ts < S) {
 				ts += nums[ed++];
 			}
-			
+
 			while (ts >= S && st < ed) {
 				res = min(res, ed - st);
 				ts -= nums[st++];
