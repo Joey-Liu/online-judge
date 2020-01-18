@@ -1,0 +1,3 @@
+/Users/liujiaqi04/workspace/OJ/online-judge/codeforces/Practice/1500-1700/1284B /cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/liujiaqi04/workspace/OJ/online-judge/codeforces/Practice/1500-1700/1284B /cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/liujiaqi04/workspace/OJ/online-judge/codeforces/Practice/1500-1700/1284B /cmake-build-debug/CMakeFiles/1284B_.dir
