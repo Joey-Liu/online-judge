@@ -37,12 +37,18 @@ int bisearch(vector<Node> & vn, int lp, int rp, int tar) {
     return lp;
 }
 
+
+
 int main() {
     freopen("in.txt", "r", stdin);
     freopen("out.txt", "w", stdout);
     LL N, self_ac = 0;
     cin >> N;
     vector<Node> vn;
+    int * a = new int;
+    int * b = new int[55];
+    delete a;
+    delete [] b;
 
     LL res = 0;
     for (int i = 0; i < N; i++) {
