@@ -18,10 +18,8 @@ typedef long long LL;
 typedef long double LD;
 typedef pair<int, int> PII;
 
-const int maxn = 100000 + 10;
-LL nums[maxn];
-LL N, M, K;
-
+const int maxn = 200000 + 10;
+int nums[maxn], N, K;
 
 int main()
 {
@@ -30,22 +28,27 @@ int main()
 	ios::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);
 
-	cin >> N >> M >> K;
-	for (int i = 0; i < M; i++) {
+	cin >> N >> K;
+	map<int, int> tab;
+	for (int i = 0; i < N; i++) {
 		cin >> nums[i];
-		nums[i]--;
+		tab[nums[i] % K]++;
 	}
 
-	LL sum = 0, ind = 0, res = 0;
-	while (ind < M) {
-		LL t = 0, kase = (nums[ind] - sum) / K;
-		while ((nums[ind] - sum) / K == kase) {
-			ind++;
-			t++;
+	int res = 0;
+	for (int i = 0; i <= K / 2; i++) {
+		int j = (K - i) % K;
+		if (i != j) {
+			int t = min(tab[i], tab[j]);
+			res += 2 * t;
+			tab[i] -= t;
+			tab[j] -= t;
 		}
-
-		res++;
-		sum += t;
+		else {
+			int t = tab[i] / 2;
+			res += t * 2;
+			tab[i] -= t * 2;
+		}
 	}
 	cout << res << endl;
 	return 0;

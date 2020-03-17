@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/liujiaqi04/workspace/OJ/online-judge/codeforces/Practice/1500-1700/1282B1/main.cpp
+iostream
+-
+string
+-
+algorithm
+-
+stdio.h
+-
+memory.h
+-
+

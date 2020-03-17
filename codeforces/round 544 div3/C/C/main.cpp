@@ -18,10 +18,22 @@ typedef long long LL;
 typedef long double LD;
 typedef pair<int, int> PII;
 
-const int maxn = 100000 + 10;
-LL nums[maxn];
-LL N, M, K;
+const int maxn = 200000 + 10;
+int nums[maxn], N;
 
+
+int bisearch(int tar, int lp, int rp) {
+	while (lp < rp) {
+		int mid = lp + (rp - lp) / 2;
+		if (nums[mid] > tar) {
+			rp = mid;
+		}
+		else {
+			lp = mid + 1;
+		}
+	}
+	return lp;
+}
 
 int main()
 {
@@ -30,23 +42,19 @@ int main()
 	ios::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);
 
-	cin >> N >> M >> K;
-	for (int i = 0; i < M; i++) {
+	cin >> N;
+	for (int i = 0; i < N; i++) {
 		cin >> nums[i];
-		nums[i]--;
 	}
+	sort(nums, nums + N);
 
-	LL sum = 0, ind = 0, res = 0;
-	while (ind < M) {
-		LL t = 0, kase = (nums[ind] - sum) / K;
-		while ((nums[ind] - sum) / K == kase) {
-			ind++;
-			t++;
-		}
-
-		res++;
-		sum += t;
-	}
+	int res = -1;
+	for (int i = 0; i < N; i++) {
+		if (i == 0 || nums[i - 1] != nums[i]) {
+			int ind = bisearch(nums[i] + 5, 0, N);
+			res = max(res, ind - i);
+		}// if
+	}//for int i
 	cout << res << endl;
 	return 0;
 }

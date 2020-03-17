@@ -19,9 +19,7 @@ typedef long double LD;
 typedef pair<int, int> PII;
 
 const int maxn = 100000 + 10;
-LL nums[maxn];
-LL N, M, K;
-
+int nums[maxn];
 
 int main()
 {
@@ -29,24 +27,22 @@ int main()
 	freopen("out.txt", "w", stdout);
 	ios::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);
+	int h1, h2, m1, m2;
+	char ch;
+	cin >> h1 >> ch >> m1;
+	cin >> h2 >> ch >> m2;
 
-	cin >> N >> M >> K;
-	for (int i = 0; i < M; i++) {
-		cin >> nums[i];
-		nums[i]--;
-	}
+	int a = h1 * 60 + m1;
+	int b = h2 * 60 + m2;
 
-	LL sum = 0, ind = 0, res = 0;
-	while (ind < M) {
-		LL t = 0, kase = (nums[ind] - sum) / K;
-		while ((nums[ind] - sum) / K == kase) {
-			ind++;
-			t++;
-		}
+	int c = (b + a) / 2;
+	int hour = c / 60, minute = c % 60;
+	if (hour < 10)
+		cout << "0";
+	cout << hour << ":";
+	if (minute < 10)
+		cout << "0";
+	cout << minute << endl;
 
-		res++;
-		sum += t;
-	}
-	cout << res << endl;
 	return 0;
 }

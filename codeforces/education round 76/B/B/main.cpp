@@ -18,10 +18,26 @@ typedef long long LL;
 typedef long double LD;
 typedef pair<int, int> PII;
 
+const int inf = 0x3f3f3f3f;
 const int maxn = 100000 + 10;
-LL nums[maxn];
-LL N, M, K;
+int nums[maxn];
 
+bool work(int a, int b) {
+	int max_num = inf;
+	switch (a) {
+	case 1:
+		max_num = 1;
+		break;
+	case 2:
+	case 3:
+		max_num = 3;
+		break;
+	default:
+		max_num = inf;
+	}
+
+	return max_num >= b;
+}
 
 int main()
 {
@@ -29,24 +45,17 @@ int main()
 	freopen("out.txt", "w", stdout);
 	ios::sync_with_stdio(false);
 	cin.tie(0); cout.tie(0);
-
-	cin >> N >> M >> K;
-	for (int i = 0; i < M; i++) {
-		cin >> nums[i];
-		nums[i]--;
-	}
-
-	LL sum = 0, ind = 0, res = 0;
-	while (ind < M) {
-		LL t = 0, kase = (nums[ind] - sum) / K;
-		while ((nums[ind] - sum) / K == kase) {
-			ind++;
-			t++;
+	int casenum;
+	cin >> casenum;
+	while (casenum--) {
+		int a, b;
+		cin >> a >> b;
+		if (work(a, b) == false) {
+			cout << "NO" << endl;
+		} else {
+			cout << "YES" << endl;
 		}
-
-		res++;
-		sum += t;
 	}
-	cout << res << endl;
+
 	return 0;
 }
