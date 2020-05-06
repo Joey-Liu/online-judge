@@ -10,7 +10,7 @@ using namespace std;
 const int maxn = 10000 + 20;
 typedef pair<int, int> PII;
 
-int segTree[maxn << 2], add[maxn << 2], kasenum, N;
+int segTree[maxn << 4], add[maxn << 4], kasenum, N;
 vector<int> nums;
 PII pii[maxn];
 
@@ -34,7 +34,7 @@ void update(int root, int lp, int rp, int upd_lp, int upd_rp, int val) {
     }
     if (upd_lp <= lp && rp <= upd_rp) {
         add[root] = val;
-        segTree[val] = val;
+        segTree[root] = val;
         return;
     }
     int le_son = root << 1;
@@ -103,6 +103,7 @@ int main() {
         set<int> si;
         for (int i = 1; i <= div_n; i++) {
             int t = query(1, 1, div_n, i, i);
+//            cout << "t: " << t << endl;
             si.insert(t);
         }
         cout << si.size() << endl;
