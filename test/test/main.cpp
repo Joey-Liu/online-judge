@@ -1,68 +1,24 @@
-#include <string>
 #include <iostream>
-#include <stdlib.h>
-#include <stdio.h>
-#include <stack>
-#include <string.h>
-#include <sstream>
-
 using namespace std;
 
-class Solution {
-public:
-	int calculate(string s) {
-		int N = s.size();
-		int ind = 0, result = 0;
-		stack<int> sta;
 
-		int num = 0, sign = 1;
-		while (ind < N) {
+const int mode = 1e9 + 7;
+int power_func(int a, int b) {
+	int res = 1, cur = 1, multi = a;
+	while (b != 0) {
+		if (b & 1) {
+			res *= multi;
+			res %= mode;
+		}
+		multi *= multi;
+		multi %= mode;
 
-			if (isdigit(s[ind])) {
-				num = num * 10 + s[ind] - '0';
-			}
-			else if (s[ind] == '+') {
-				result += sign * num;
-				sign = 1;
-				num = 0;
-			}
-			else if (s[ind] == '-') {
-				result += sign * num;
-				sign = -1;
-				num = 0;
-			}
-			else if ('(' == s[ind]) {
-				sta.push(result);
-				sta.push(sign);
-				result = 0;
-				sign = 1;
-			}
-			else if (')' == s[ind]) {
-				result += sign * num;
-				result *= sta.top(); sta.pop();
-				result += sta.top(); sta.pop();
-				//num = 0;
-				//sign = 1;
-			}
-			ind++;
-		}//while
-		if (num != 0)
-			result += sign * num;
-		return result;
+		b >>= 1;
 	}
-};
+	return res;
+}
 
 int main() {
-	Solution sol;
-	string s = "3-(5-(8)-(2+(9-(0-(8-(2))))-(4))-(4))";
-	int a = sol.calculate(s);
+	int a = power_func(2, 10);
 	cout << a << endl;
-	stringstream ss;
-	long double d = long double (8.45648387458);
-	ss << d;
-	string str;
-	ss >> str;
-	cout << str << endl;
-	system("pause");
-	return 0;
 }
