@@ -23,7 +23,7 @@ int nums[maxn], t[maxn];
 
 bool work(int arr[]) {
 	int t = arr[0] % 2;
-	for (int i = 1; i < 4; i++) {
+	for (int i = 1; i < 4; i++) { 
 		if (t != arr[i] % 2) {
 			return false;
 		}
