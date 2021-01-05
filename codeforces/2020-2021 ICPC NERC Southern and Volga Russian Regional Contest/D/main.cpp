@@ -24,7 +24,7 @@ int main() {
         LL diff = A > B ? A - B - 1 : B - A - 1;
         LL left = A < B ? A - 1 : N - A;
         LL total_time = diff + left + 1;
-        LL X = diff;
+        LL X =  ;
         LL Y = 1, ans = 0;
         for (int i = 0; i < M; i++) {
             if (ans >= X) {
